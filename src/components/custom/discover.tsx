@@ -15,21 +15,7 @@ function myAge (dob : Date) {
 }
 
     return (
-        <section id="about" className="bg-gray-800 text-white py-16 px-4 relative overflow-hidden">
-            {/* Background grid pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div 
-                    className="w-full h-full"
-                    style={{
-                        backgroundImage: `
-                            linear-gradient(rgba(255, 0, 0, 0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255, 0, 0, 0.1) 1px, transparent 1px)
-                        `,
-                        backgroundSize: '40px 40px'
-                    }}
-                />
-            </div>
-
+        <section id="about" className="text-white py-16 px-4 relative">
             <div className="container mx-auto relative z-10">
                 {/* Section Header */}
                 <motion.div

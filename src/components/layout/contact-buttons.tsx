@@ -7,14 +7,14 @@ import { Github, Facebook, Phone, Linkedin, Mail } from "lucide-react";
 const socials = [
   {
     name: "GitHub",
-    href: "https://github.com/your-username",
+    href: "https://github.com/Rei-3",
     Icon: Github,
     color: "#333333",
     hoverColor: "white",
   },
   {
     name: "Facebook",
-    href: "https://facebook.com/your-profile",
+    href: "https://www.facebook.com/super.gamer.5",
     Icon: Facebook,
     color: "#1877F2",
     hoverColor: "#166fe5",
@@ -35,7 +35,7 @@ const socials = [
   },
   {
     name: "Email",
-    href: "mailto:your.email@domain.com",
+    href: "christan.endam@norsu.edu.ph",
     Icon: Mail,
     color: "#ea4335",
     hoverColor: "#d33b2c",

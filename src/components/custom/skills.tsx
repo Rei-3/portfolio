@@ -172,21 +172,7 @@ const skillCategories = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="bg-gray-900 text-white py-16 px-4 relative overflow-hidden">
-            {/* Background grid pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div 
-                    className="w-full h-full"
-                    style={{
-                        backgroundImage: `
-                            linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px)
-                        `,
-                        backgroundSize: '30px 30px'
-                    }}
-                />
-            </div>
-
+        <section id="skills" className="text-white py-16 px-4 relative">
             <div className="container mx-auto relative z-10">
                 {/* Section Header */}
                 <motion.div

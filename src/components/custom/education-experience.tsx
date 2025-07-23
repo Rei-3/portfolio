@@ -3,21 +3,7 @@ import { motion } from "motion/react";
 
 export default function EducationExperience() {
     return (
-        <section id="education-experience" className="bg-black text-white py-16 px-4 relative overflow-hidden">
-            {/* Background grid pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div
-                    className="w-full h-full"
-                    style={{
-                        backgroundImage: `
-                            linear-gradient(rgba(255, 255, 0, 0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255, 255, 0, 0.1) 1px, transparent 1px)
-                        `,
-                        backgroundSize: '35px 35px'
-                    }}
-                />
-            </div>
-
+        <section id="education-experience" className="text-white py-16 px-4 relative">
             <div className="container mx-auto relative z-10">
                 {/* Section Header */}
                 <motion.div

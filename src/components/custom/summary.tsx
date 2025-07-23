@@ -6,6 +6,28 @@ import { Button } from "../ui/button";
 import SocialLinks from "../layout/contact-buttons";
 
 export default function Summary() {
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            const headerHeight = 80; // Account for fixed header
+            const elementPosition = element.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const downloadCV = () => {
+        const link = document.createElement('a');
+        link.href = '/Endam, Christan C-CV-1.pdf';
+        link.download = 'Christan_Endam_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <>
             {/* NERV-themed background with grid pattern */}
@@ -111,6 +133,7 @@ export default function Summary() {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Button
+                                onClick={() => scrollToSection('contact')}
                                 className="bg-red-600 hover:bg-red-700 text-white font-mono font-bold px-6 py-3 border-2 border-red-500 transition-all duration-200 text-sm sm:text-base"
                                 size="lg"
                                 style={{ 
@@ -121,14 +144,15 @@ export default function Summary() {
                                 &gt; INITIATE CONTACT_
                             </Button>
                             <Button
+                                onClick={downloadCV}
                                 className="bg-orange-600 hover:bg-orange-700 text-white font-mono font-bold px-6 py-3 border-2 border-orange-500 transition-all duration-200 text-sm sm:text-base"
                                 size="lg"
                                 style={{ 
-                                    boxShadow: '0 0 20px rgba(255, 0, 0, 0.3)',
+                                    boxShadow: '0 0 20px rgba(255, 165, 0, 0.3)',
                                     textShadow: '0 0 5px rgba(255, 255, 255, 0.5)'
                                 }}
                             >
-                                &gt; DOWNLOAD RESUME_
+                                &gt; DOWNLOAD CV_
                             </Button>
                              <SocialLinks />
                         </motion.div>

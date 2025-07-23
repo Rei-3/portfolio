@@ -154,7 +154,7 @@ export default function Footer() {
                 </motion.div>
 
                 {/* Navigation Links */}
-                <motion.nav
+                {/* <motion.nav
                     className="mb-4 md:mb-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -192,7 +192,7 @@ export default function Footer() {
                             </motion.button>
                         </li>
                     </ul>
-                </motion.nav>
+                </motion.nav> */}
 
                 {/* System Status */}
                 <motion.div

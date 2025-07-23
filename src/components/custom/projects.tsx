@@ -8,6 +8,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+import Link from "next/link";
+
 const projects = [
     {
         id: 1,
@@ -15,7 +17,8 @@ const projects = [
         description: "Spring Boot Java backend application providing robust API endpoints for class record management with secure authentication and data processing.",
         technologies: ["SPRING BOOT", "JAVA", "REST API"],
         status: "COMPLETED",
-        type: "BACKEND"
+        type: "BACKEND",
+        url: "https://github.com/Rei-3/ClassRecord"
     },
     {
         id: 2,
@@ -23,7 +26,8 @@ const projects = [
         description: "Modern web interface built with Next.js providing intuitive class record management with real-time updates and responsive design.",
         technologies: ["NEXT.JS", "NODE.JS", "TYPESCRIPT"],
         status: "COMPLETED",
-        type: "WEB"
+        type: "WEB",
+        url: "https://github.com/Rei-3/ClassRecordFrontend"
     },
     {
         id: 3,
@@ -31,7 +35,8 @@ const projects = [
         description: "Full-stack document tracking system enabling efficient document workflow management across different departments.",
         technologies: ["NEXT.JS", "LARAVEL", "PHP"],
         status: "ACTIVE",
-        type: "FULLSTACK"
+        type: "FULLSTACK",
+        url: ""
     },
     {
         id: 4,
@@ -39,7 +44,8 @@ const projects = [
         description: "Cross-platform mobile application using React Native and Expo for on-the-go class record access and management.",
         technologies: ["REACT NATIVE", "EXPO", "JAVASCRIPT"],
         status: "COMPLETED",
-        type: "MOBILE"
+        type: "MOBILE",
+        url: "https://github.com/Rei-3/classrecord-app"
     },
     {
         id: 5,
@@ -47,27 +53,14 @@ const projects = [
         description: "Custom web application built with PHP following MVC architectural pattern for dental clinic management system.",
         technologies: ["PHP", "MVC", "MYSQL"],
         status: "COMPLETED",
-        type: "WEB"
+        type: "WEB",
+        url: "https://github.com/Rei-3/PlatTechProject"
     }
 ];
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-gray-900 text-white py-16 px-4 relative overflow-hidden">
-            {/* Background grid pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div 
-                    className="w-full h-full"
-                    style={{
-                        backgroundImage: `
-                            linear-gradient(rgba(255, 0, 0, 0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255, 0, 0, 0.1) 1px, transparent 1px)
-                        `,
-                        backgroundSize: '40px 40px'
-                    }}
-                />
-            </div>
-
+        <section id="projects" className="text-white py-16 px-4 relative">
             <div className="container mx-auto relative z-10">
                 {/* Section Header */}
                 <motion.div
@@ -193,15 +186,18 @@ export default function Projects() {
 
                             {/* Action Buttons */}
                             <div className="flex gap-2">
-                               
+                              
                                 <motion.button
                                     className="flex-1 bg-green-600 hover:bg-green-700 text-white font-mono text-xs py-2 border border-green-500 transition-all duration-200"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     style={{ boxShadow: '0 0 10px rgba(0, 255, 0, 0.3)' }}
+                                    onClick={() => window.open(project.url, "_blank")}
                                 >
+                                
                                     &gt; SOURCE_CODE
                                 </motion.button>
+                                  
                             </div>
                                 </motion.div>
                             </CarouselItem>
