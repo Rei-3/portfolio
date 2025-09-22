@@ -44,46 +44,43 @@ const socials = [
 
 export default function ContactButtons() {
   return (
-    <motion.div
-      className="flex flex-wrap gap-2"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
-    >
+    <div className="flex flex-col md:flex-row gap-4">
       {socials.map(({ name, href, Icon, color, hoverColor }, index) => (
         <motion.a
-          key={name}
+          key={index}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          whileHover={{ scale: 1.1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.1 }}
+          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.95 }}
         >
           <Button
             variant="outline"
-            size="icon"
-            className="w-12 h-12 border-2 text-white transition-all duration-200"
+            className="flex items-center gap-2"
             style={{
-              backgroundColor: color,
               borderColor: color,
+              color: color,
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = hoverColor;
-              e.currentTarget.style.borderColor = hoverColor;
+              (e.currentTarget as HTMLButtonElement).style.backgroundColor =
+                hoverColor;
+              (e.currentTarget as HTMLButtonElement).style.color = "white";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = color;
-              e.currentTarget.style.borderColor = color;
+              (e.currentTarget as HTMLButtonElement).style.backgroundColor =
+                "transparent";
+              (e.currentTarget as HTMLButtonElement).style.color = color;
             }}
           >
-            <Icon className="h-5 w-5" />
-            <span className="sr-only">{name}</span>
+            <Icon size={16} />
+            {name}
           </Button>
         </motion.a>
       ))}
-    </motion.div>
+
+    </div>
   );
 }
