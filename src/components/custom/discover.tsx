@@ -25,7 +25,7 @@ export default function Discover() {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="flex-1 lg:max-w-4xl"
       >
-        <Card className="bg-blur-sm backdrop-blur-md bg-white/70 dark:bg-gray-800/70 border-0 shadow-2xl relative overflow-visible">
+        <Card className="bg-blur-sm backdrop-blur-md bg-white/70 dark:bg-gray-800/70 border-0 shadow-2xl relative overflow-visible transition-all duration-500">
           <CardHeader className="pb-4">
             <motion.div
               initial={{ opacity: 0, y: 10 }}

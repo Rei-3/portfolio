@@ -3,13 +3,11 @@
 import Discover from "@/components/custom/discover";
 import EducationExperience from "@/components/custom/education-experience";
 import Skills from "@/components/custom/skills";
-import ThemeSettings from "@/components/custom/theme-settings";
-import ContactButtons from "@/components/layout/contact-buttons";
-import Footer from "@/components/layout/footer";
-import Header from "@/components/layout/header";
-import { motion, AnimatePresence } from "framer-motion";
+import Summary from "@/components/custom/summary";
+
+import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import Image from "next/image";
+
 
 export default function Home() {
   const { theme } = useTheme();
@@ -62,22 +60,20 @@ export default function Home() {
             <Discover />
           </motion.div>
         </motion.div>
-
-        {/* education and experience */}
-        <motion.div className="bg-gray-900 transition-colors duration-500">
+        <motion.div className="bg-gray-100/70 dark:bg-gray-800/40 transition-colors duration-500">
           <Skills />
         </motion.div>
 
-        <motion.div
-      className="bg-gray-800/40 w-full max-w-6xl mx-auto px-4 py-4 md:py-4"
-        >
+      <motion.div className="bg-gray-100/5 dark:bg-gray-900 px-4 py-4 md:py-4 transition-colors duration-500">
           <EducationExperience />
         </motion.div>
+
+        {/* education and experience */}
 
         {/* Main*/}
 
         {/* Footer */}
-        <Footer />
+       
       </div>
     </div>
   );

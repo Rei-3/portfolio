@@ -48,8 +48,24 @@ export default function EducationExperience() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, margin: "-50px" }}
-            className="w-full max-w-6xl mx-auto px-4 py-4 md:py-4"
+            className="bg-gray-100/40 dark:bg-gray-800/40 w-full max-w-6xl mx-auto px-4 py-4 md:py-4"
         >
+            {/* Section Header */}
+        <motion.div
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-4">
+            Christan's Life
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Timeline of my education and experience
+          </p>
+        </motion.div>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 {/* Education Section */}
                 <motion.div

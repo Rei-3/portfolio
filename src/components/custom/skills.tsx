@@ -6,18 +6,6 @@ import {
   Database,
   Settings,
   Palette,
-  Terminal,
-  Globe,
-  Smartphone,
-  FileCode,
-  Brush,
-  Camera,
-  Video,
-  GitBranch,
-  Cloud,
-  Zap,
-  Badge,
-  Sparkles,
 } from "lucide-react";
 import { HoverCard, HoverCardTrigger } from "../ui/hover-card";
 import { HoverCardContent } from "@radix-ui/react-hover-card";
@@ -237,7 +225,9 @@ export default function Skills() {
                 <span className="mb-2">
                   <category.icon size={32} color={category.color} />
                 </span>
-                <h3 className={`text-lg font-bold ${category.textColor} dark:text-white drop-shadow`}>
+                <h3
+                  className={`text-lg font-bold ${category.textColor} dark:text-white drop-shadow`}
+                >
                   {category.title}
                 </h3>
               </div>
@@ -257,7 +247,7 @@ export default function Skills() {
                       <HoverCard>
                         <HoverCardTrigger asChild>
                           <motion.div
-                            className={`w-12 h-12 bg-gray-200 dark:bg-gray-400 rounded p-1 cursor-pointer`}
+                            className={`w-12 h-12 bg-gray-300 dark:bg-gray-700 rounded p-1 cursor-pointer`}
                             style={{
                               filter: `drop-shadow(0 0 5px ${category.color}30)`,
                             }}
@@ -269,8 +259,14 @@ export default function Skills() {
                             />
                           </motion.div>
                         </HoverCardTrigger>
-                        <HoverCardContent className="text-base font-semibold text-center text-gray-900 dark:text-white bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 shadow-lg rounded-lg px-4 py-2">
-                          {skill.name}
+                        <HoverCardContent
+                          className="w-auto p-3 bg-white dark:bg-gray-900 border-2 border-gray-200 dark:border-gray-700 shadow-lg rounded-lg"
+                          side="top"
+                          align="center"
+                        >
+                          <div className="text-sm font-semibold text-gray-900 dark:text-white">
+                            {skill.name}
+                          </div>
                         </HoverCardContent>
                       </HoverCard>
                     </div>

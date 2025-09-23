@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import { motion } from "motion/react";
-import Header from "../layout/header";
 import { Button } from "../ui/button";
 import SocialLinks from "../layout/contact-buttons";
 
