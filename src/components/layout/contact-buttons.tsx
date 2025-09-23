@@ -10,7 +10,7 @@ const socials = [
     href: "https://github.com/Rei-3",
     Icon: Github,
     color: "#333333",
-    hoverColor: "white",
+    hoverColor: "#333324",
   },
   {
     name: "Facebook",
@@ -59,20 +59,19 @@ export default function ContactButtons() {
         >
           <Button
             variant="outline"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 shadow-md"
             style={{
               borderColor: color,
               color: color,
+              backgroundColor: color,
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                hoverColor;
+              (e.currentTarget as HTMLButtonElement).style.backgroundColor = hoverColor;
               (e.currentTarget as HTMLButtonElement).style.color = "white";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                "transparent";
-              (e.currentTarget as HTMLButtonElement).style.color = color;
+              (e.currentTarget as HTMLButtonElement).style.backgroundColor = color;
+              (e.currentTarget as HTMLButtonElement).style.color = "white";
             }}
           >
             <Icon size={16} />

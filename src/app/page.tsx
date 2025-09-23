@@ -7,7 +7,7 @@ import ThemeSettings from "@/components/custom/theme-settings";
 import ContactButtons from "@/components/layout/contact-buttons";
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
@@ -18,21 +18,61 @@ export default function Home() {
     <div>
       <div className="min-h-screen flex flex-col ">
         {/* Starting Point */}
-        <div
-          className="w-screen h-screen bg-[radial-gradient(circle_at_69%_85%,violet,indigo,indigo)] 
-         dark:bg-[radial-gradient(circle_at_69%_85%,rgb(75,85,99),rgb(17,24,39),rgb(0,0,0))]
-         flex flex-col items-center justify-center px-4 transition-colors duration-500"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="relative w-screen h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
         >
-          {/* Header */}
-        
-          <Discover />
-          <ContactButtons />
-        </div>
-        <EducationExperience />
-        {/* Floating Theme Toggle */}
+          {/* Base Background Image */}
 
-        <Skills />
-        <ThemeSettings />
+          <motion.div
+            className="absolute inset-0 bg-fixed bg-center bg-no-repeat bg-cover blur-xs"
+            style={{
+              backgroundImage: "url(/me-unwolf.jpg)",
+              transform: "scale(1.2)",
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+
+          {/* Dark Mode Wolf Overlay - Half Screen */}
+          <motion.div
+            className="absolute inset-0 bg-fixed bg-center bg-no-repeat bg-cover blur-xs"
+            style={{
+              backgroundImage: "url(/wolf-me.jpg)",
+              transform: "scale(1.2)",
+              // clipPath: 'polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%)'
+            }}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: theme === "dark" ? 1 : 0,
+            }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          />
+
+          {/* Content Layer */}
+          <motion.div
+            className="relative z-10 flex flex-col items-center justify-center h-full w-full"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <Discover />
+          </motion.div>
+        </motion.div>
+
+        {/* education and experience */}
+        <motion.div className="bg-gray-900 transition-colors duration-500">
+          <Skills />
+        </motion.div>
+
+        <motion.div
+      className="bg-gray-800/40 w-full max-w-6xl mx-auto px-4 py-4 md:py-4"
+        >
+          <EducationExperience />
+        </motion.div>
 
         {/* Main*/}
 
