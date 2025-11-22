@@ -78,6 +78,11 @@ const skillCategories = [
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
       },
       {
+        name: "Python",
+        iconUrl:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      },
+      {
         name: "Java",
         iconUrl:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
@@ -139,6 +144,21 @@ const skillCategories = [
         name: "Git",
         iconUrl:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+      },
+      {
+        name: "Docker",
+        iconUrl:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      },
+      {
+        name: "Kubernetes",
+        iconUrl:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg",
+      },
+      {
+        name: "Postman",
+        iconUrl:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
       },
       {
         name: "HTTPie",

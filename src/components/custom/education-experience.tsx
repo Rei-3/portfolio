@@ -36,6 +36,7 @@ export default function EducationExperience() {
             role: "Software Developer",
             duration: "July 2024 - December 2024"
         },
+        
     ];
 
     // Don't reverse the original arrays to maintain proper order
