@@ -36,6 +36,13 @@ export default function EducationExperience() {
             role: "Software Developer",
             duration: "July 2024 - December 2024"
         },
+        {
+            company: "Cloudeksperten Aps",
+            location: "",
+            position: "Developer",
+            role: "Developer",
+            duration: "October 2025 - Present"
+        },
         
     ];
 
